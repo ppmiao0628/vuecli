@@ -29,7 +29,7 @@ export default new Router({
       }
     },
     {
-      path: '/mpp',
+      path: '/mpp/:username/:age(\\d+)',
       component: Mpp,
       children: [
         {

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-link to='/'>index</router-link> |
-    <router-link to='/mpp'>Mpp</router-link> |
+    <router-link to='/mpp/keller/23'>Mpp</router-link> |
     <router-link :to="{name:'mpp1',params:{username:'keller',age:25}}">Mpp1</router-link>
     <div>{{$route.name}}</div>
     <router-view/>

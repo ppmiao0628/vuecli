@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <h1>username:{{ $route.params.username }}</h1>
+    <h1>age:{{ $route.params.age }}</h1>
     <router-view></router-view>
   </div>
 </template>
