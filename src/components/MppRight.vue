@@ -1,18 +1,16 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h1>{{ $route.params.username }}</h1>
-    <h1>{{ $route.params.age }}</h1>
-
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Mpp1',
+  name: 'MppRight',
   data () {
     return {
-      msg: 'Welcome to Your Mpp1 page'
+      msg: 'Welcome to Your MppRight page'
     }
   }
 }
