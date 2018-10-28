@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <router-link to='/'>index</router-link>
-    <router-link to='/hi'>hi</router-link>
+    <router-link to='/'>index</router-link> |
+    <router-link to='/mpp'>Mpp</router-link> |
+    <router-link to='/mpp/mpp1'>Mpp1</router-link>
     <router-view/>
   </div>
 </template>
