@@ -29,6 +29,14 @@ export default new Router({
       }
     },
     {
+      path: '/goHome',
+      redirect: '/'
+    },
+    {
+      path: '/goParams/:username/:age(\\d+)',
+      redirect: '/mpp/:username/:age(\\d+)'
+    },
+    {
       path: '/mpp/:username/:age(\\d+)',
       component: Mpp,
       children: [
