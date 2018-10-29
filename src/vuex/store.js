@@ -8,16 +8,32 @@ const state = {
 }
 const mutations = {
   add(state, n) {
+    console.log('mutatiosn-add');
     return state.count += n;
   },
   reduce(state, n) {
+    console.log('mutatiosn-reduce');
     return state.count -= n;
   }
 }
 const getters = {
-  count: state => state.count += 20
+  count: state => {
+    console.log('getters');
+    return state.count += 20;
+  }
 }
-
+const actions = {
+  addActions(context) {
+    context.commit('add', 4);
+    setTimeout(() => {
+      context.commit('reduce', 5)
+    }, 3000);
+    console.log('addActions执行了');
+  },
+  reduceActions({ commit }) {
+    commit('reduce', '3');
+  }
+}
 export default new Vuex.Store({
-  state, mutations, getters
+  state, mutations, getters, actions
 })
