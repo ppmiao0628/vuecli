@@ -7,8 +7,8 @@
     <!-- <h2>{{count1}}:from state</h2> -->
     <h2>{{count}}:from state</h2>
     <p>
-      <button @click="$store.commit('add')">+</button>
-      <button @click="$store.commit('reduce')">-</button>
+      <button @click="$store.commit('add',10)">+</button>
+      <button @click="reduce(5)">-</button>
     </p>
     <router-view></router-view>
   </div>
@@ -16,7 +16,7 @@
 
 <script>
 import store from "@/vuex/store";
-import { mapState } from "vuex";
+import { mapState, mapMutations, mapGetters } from "vuex";
 export default {
   name: "Mpp",
   data() {
@@ -35,7 +35,11 @@ export default {
   //     return state.count;
   //   }
   // })
-  computed:mapState(['count'])
+  computed: {
+    ...mapState(["count"]),
+    ...mapGetters(['count'])
+  },
+  methods:mapMutations(['add','reduce'])
 };
 </script>
 
