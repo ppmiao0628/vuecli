@@ -5,6 +5,7 @@ import Mpp from '@/components/Mpp'
 import MppLeft from '@/components/MppLeft'
 import MppRight from '@/components/MppRight'
 import Mpp1 from '@/components/Mpp1'
+import TomatoTime from '@/view/tomatoTime/App'
 
 Vue.use(Router)
 
@@ -17,6 +18,13 @@ export default new Router({
         default: HelloWorld,
         left: MppLeft,
         right: MppRight
+      }
+    },
+    {
+      path: '/tomatotime',
+      name: 'TomatoTime',
+      components: {
+        default: TomatoTime
       }
     },
     {

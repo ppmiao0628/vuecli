@@ -4,16 +4,23 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const state = {
-  count: 1
+  count: 1,
+  totalTime: 0
 }
 const mutations = {
   add(state, n) {
     console.log('mutatiosn-add');
     return state.count += n;
   },
-  reduce(state, n) {
-    console.log('mutatiosn-reduce');
-    return state.count -= n;
+  // reduce(state, n) {
+  //   console.log('mutatiosn-reduce');
+  //   return state.count -= n;
+  // },
+  setTotalTime (state, t) {
+    state.totalTime = t
+  },
+  reduceTotalTime (state) {
+    return state.totalTime--
   }
 }
 const getters = {
