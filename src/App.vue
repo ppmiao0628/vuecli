@@ -8,6 +8,9 @@
         <router-link class="navi-item-link" to='/tomatotime'>tomatoTime</router-link>
       </li>
       <li class="navi-item">
+        <router-link class="navi-item-link" to='/imginfo'>ImgInfo</router-link>
+      </li>
+      <li class="navi-item">
         <router-link class="navi-item-link" to='/mpp/keller/23'>Mpp</router-link>
       </li>
       <li class="navi-item">

@@ -6,6 +6,7 @@ import MppLeft from '@/components/MppLeft'
 import MppRight from '@/components/MppRight'
 import Mpp1 from '@/components/Mpp1'
 import TomatoTime from '@/view/tomatoTime/App'
+import ImgInfo from '@/view/imgInfo/App'
 
 Vue.use(Router)
 
@@ -25,6 +26,13 @@ export default new Router({
       name: 'TomatoTime',
       components: {
         default: TomatoTime
+      }
+    },
+    {
+      path: '/imginfo',
+      name: 'ImgInfo',
+      components: {
+        default: ImgInfo
       }
     },
     {
