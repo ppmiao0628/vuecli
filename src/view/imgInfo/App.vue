@@ -2,13 +2,14 @@
 <template>
   <div class="hello">
     <div class="title-class">获取图片信息</div>
-    <img id="imgElement" src="../../assets/img/Bush-dog.jpg" width="500px">
+    <img id="imgElement" src="../../assets/img/IMG_5497.jpg" width="500px" @click="clickImg">
     <div>图片信息：{{imgInfo}}</div>
   </div>
 </template>
 
 <script>
   import store from "@/vuex/store";
+  import EXIF from 'exif-js/exif';
 
   export default {
     components: {},
@@ -20,14 +21,14 @@
       };
     },
     created: function () {
-      this.initFun();
+      // this.initFun();
     },
     methods: {
-      initFun: function () {
+      clickImg: function () {
         let self = this;
-        EXIF.getData(document.getElementById('imgElement'), function () {
-          console.log('callback');
-          self.imgInfo = EXIF.getTag(this, "Make");
+        EXIF.getData(document.getElementById('imgElement'), function() {
+          var make = EXIF.getAllTags(this);
+          self.imgInfo = make;
         });
       }
     }
