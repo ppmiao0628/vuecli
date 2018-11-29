@@ -39,8 +39,8 @@ export default {
   },
   methods: {
     initFun: function() {
-      this.minTime = "00";
-      this.secTime = "05";
+      this.minTime = "25";
+      this.secTime = "00";
       this.startMenu = "开始一个番茄时间";
       this.timeClass = "time-class";
     },
