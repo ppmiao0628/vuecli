@@ -79,7 +79,9 @@ export default {
         if (!self.$store.state.totalTime) {
           console.log("停止");
           clearInterval(interval);
-          alert("恭喜获得一个番茄时间");
+          setTimeout(()=>{
+            alert("恭喜获得一个番茄时间");
+          },1);
         }
       }, 1000);
     },
