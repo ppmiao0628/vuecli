@@ -11,14 +11,16 @@
         <button class="tm-btn-primary" @click="restFun">{{restMenu}}</button>
       </div>
     </div>
+    <toast></toast>
   </div>
 </template>
 
 <script>
 import store from "@/vuex/store";
+import toast from "../../components/mytoast/MyToast";
 
 export default {
-  components: {},
+  components: {toast},
   name: "app",
   store,
   data() {
@@ -46,6 +48,9 @@ export default {
     },
     startFun: function() {
       let self = this;
+      if (!self.checkEventName()) {
+        return;
+      }
       self.startMenuFlag = !self.startMenuFlag;
       self.startMenu = self.startMenuFlag
         ? "开始一个番茄时间"
@@ -84,6 +89,14 @@ export default {
           },1);
         }
       }, 1000);
+    },
+    checkEventName: function () {
+      let self = this;
+      if (!self.eventName){
+        alert('请输入要做的事情！这很重要!');
+        return false;
+      }
+      return true;
     },
     padStart: function(str) {
       let len = String(str).length;
