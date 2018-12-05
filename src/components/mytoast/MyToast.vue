@@ -1,15 +1,15 @@
 <template>
-  <div class="content">
-    <div>{{ msg }}</div>
+  <div class="content" v-if="show" :class="showContent?'fadein':'fadeout'">
+    <div>{{ text }}</div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'MyToast',
-  data () {
+  data() {
     return {
-      msg: 'this is a toast'
+      text: 'this is a toast'
     }
   }
 }
@@ -33,4 +33,31 @@ export default {
   color: #000;
   background-color: darkgray;
 }
+.fadein {
+  -webkit-animation: animate-in 0.25s;
+  -o-animation: animate-in 0.25s;
+  animation: animate-in 0.25s;
+}
+.fadeout {
+  -webkit-animation: animate-out 0.25s;
+  -o-animation: animate-out 0.25s;
+  animation: animate-out 0.25s;
+  opacity: 0;
+}
+  @keyframes animate-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes animate-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 </style>

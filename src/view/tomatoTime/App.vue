@@ -11,16 +11,16 @@
         <button class="tm-btn-primary" @click="restFun">{{restMenu}}</button>
       </div>
     </div>
-    <toast></toast>
   </div>
 </template>
 
 <script>
 import store from "@/vuex/store";
-import toast from "../../components/mytoast/MyToast";
+// import toast from "../../components/mytoast/MyToast";
+
 
 export default {
-  components: {toast},
+  components: {},
   name: "app",
   store,
   data() {
@@ -48,7 +48,8 @@ export default {
     },
     startFun: function() {
       let self = this;
-      if (!self.checkEventName()) {
+      if (!self.eventName) {
+        self.$toast('兄弟，你没填内容啊');
         return;
       }
       self.startMenuFlag = !self.startMenuFlag;
@@ -93,7 +94,6 @@ export default {
     checkEventName: function () {
       let self = this;
       if (!self.eventName){
-        alert('请输入要做的事情！这很重要!');
         return false;
       }
       return true;

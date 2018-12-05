@@ -6,7 +6,9 @@ import router from './router'
 import $ from 'jquery'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import toastRegistry from './components/mytoast/index';
 
+Vue.use(toastRegistry);
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
