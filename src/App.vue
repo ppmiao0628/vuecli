@@ -5,6 +5,9 @@
         <router-link class="navi-item-link" to='/'>主页</router-link>
       </li>
       <li class="navi-item">
+        <router-link class="navi-item-link" to='/regex_check'>正则校验</router-link>
+      </li>
+      <li class="navi-item">
         <router-link class="navi-item-link" to='/tomatotime'>tomatoTime</router-link>
       </li>
       <li class="navi-item">

@@ -6,6 +6,7 @@ import MppLeft from '@/components/MppLeft'
 import MppRight from '@/components/MppRight'
 import Mpp1 from '@/components/Mpp1'
 import TomatoTime from '@/view/tomatoTime/App'
+import RegexCheck from '@/view/regex_check/App'
 import ImgInfo from '@/view/imgInfo/App'
 
 Vue.use(Router)
@@ -19,6 +20,13 @@ export default new Router({
         default: HelloWorld,
         left: MppLeft,
         right: MppRight
+      }
+    },
+    {
+      path: '/regex_check',
+      name: 'RegexCheck',
+      components: {
+        default: RegexCheck
       }
     },
     {
